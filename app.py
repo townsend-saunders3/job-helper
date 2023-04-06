@@ -1,6 +1,7 @@
 import openai
 import streamlit as st
 import nltk
+nltk.download('punkt')
 
 openai.api_key = st.secrets['api_key']
 
