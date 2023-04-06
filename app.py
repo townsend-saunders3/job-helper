@@ -55,7 +55,7 @@ def generate_response(prompt, resume, job_posting):
         engine="text-davinci-003",
         prompt=prompt_text,
         temperature=0.7,
-        max_tokens=4097,
+        max_tokens=2048,
         n=1,
         stop=None,
         timeout=10,
