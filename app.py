@@ -6,16 +6,16 @@ nltk.download('punkt')
 openai.api_key = st.secrets['api_key']
 
 prompts = [
-    "How can the candidate's skills and experience be highlighted to better match the job requirements?",
-    "What keywords and phrases from the job posting should be incorporated into the resume?",
-    "Are there any relevant projects or achievements that could be added to the resume to better demonstrate the candidate's abilities?",
-    "Is there any irrelevant information on the resume that should be removed to make it more concise and focused?",
-    "How can the candidate's resume stand out from other applicants in the job market?",
-    "Are there any specific metrics or data points that could be included to demonstrate the impact of the candidate's work?",
-    "How can the candidate's resume demonstrate their ability to learn and adapt to new technologies or methodologies?",
-    "Are there any relevant certifications or training programs that could be highlighted on the resume?",
-    "How can the candidate's resume demonstrate their leadership and collaboration skills?",
-    "Is there any additional information or context that could be added to the resume to make it more compelling to potential employers?"
+    "Given the following resume and job description, How can the candidate's skills and experience be highlighted to better match the job requirements?",
+    "Given the following resume and job description, What keywords and phrases from the job posting should be incorporated into the resume?",
+    "Given the following resume and job description, Are there any relevant projects or achievements that could be added to the resume to better demonstrate the candidate's abilities?",
+    "Given the following resume and job description, Is there any irrelevant information on the resume that should be removed to make it more concise and focused?",
+    "Given the following resume and job description, How can the candidate's resume stand out from other applicants in the job market?",
+    "Given the following resume and job description, Are there any specific metrics or data points that could be included to demonstrate the impact of the candidate's work?",
+    "Given the following resume and job description, How can the candidate's resume demonstrate their ability to learn and adapt to new technologies or methodologies?",
+    "Given the following resume and job description, Are there any relevant certifications or training programs that could be highlighted on the resume?",
+    "Given the following resume and job description, How can the candidate's resume demonstrate their leadership and collaboration skills?",
+    "Given the following resume and job description, Is there any additional information or context that could be added to the resume to make it more compelling to potential employers?"
 ]
 
 # Streamlit app code
