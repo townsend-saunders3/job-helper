@@ -36,7 +36,7 @@ def app():
     if st.button("Generate Response"):
         for prompt_choice in prompts:
             response = generate_response(prompt_choice, resume_text, job_posting_text)
-        st.write(response)
+            st.write(response)
 
 def count_tokens(text):
     tokens = nltk.word_tokenize(text)
