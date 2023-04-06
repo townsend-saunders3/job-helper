@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = st.secrets['api_key']
 
 prompts = [
     "How can the candidate's skills and experience be highlighted to better match the job requirements?",
