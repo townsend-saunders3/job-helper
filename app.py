@@ -19,7 +19,7 @@ prompts = [
 # Streamlit app code
 def app():
     st.title("Resume Improvement Tool")
-    st.write("Please select a prompt:")
+    # st.write("Please select a prompt:")
 
     # # Prompt selection dropdown
     # prompt_choice = st.selectbox("Select a prompt", prompts)
