@@ -21,8 +21,8 @@ def app():
     st.title("Resume Improvement Tool")
     st.write("Please select a prompt:")
 
-    # Prompt selection dropdown
-    prompt_choice = st.selectbox("Select a prompt", prompts)
+    # # Prompt selection dropdown
+    # prompt_choice = st.selectbox("Select a prompt", prompts)
 
     # Resume text input
     resume_text = st.text_area("Paste your resume text here")
@@ -32,7 +32,8 @@ def app():
 
     # Generate response button
     if st.button("Generate Response"):
-        response = generate_response(prompt_choice, resume_text, job_posting_text)
+        for prompt_choice in prompts:
+            response = generate_response(prompt_choice, resume_text, job_posting_text)
         st.write(response)
 
 # Function to generate response using ChatGPT
