@@ -1,6 +1,6 @@
 import openai
 import streamlit as st
-from transformers import AutoTokenizer
+import nltk
 
 openai.api_key = st.secrets['api_key']
 
@@ -37,13 +37,14 @@ def app():
             response = generate_response(prompt_choice, resume_text, job_posting_text)
         st.write(response)
 
+def count_tokens(text):
+    tokens = nltk.word_tokenize(text)
+    return len(tokens)
+
 # Function to generate response using ChatGPT
 def generate_response(prompt, resume, job_posting):
-    engine = "text-davinci-002"
     prompt_text = f"Prompt: {prompt}\nResume: {resume}\nJob Posting: {job_posting}\n"
-    tokenizer = AutoTokenizer.from_pretrained(engine)
-    tokens = tokenizer.encode(prompt_text, add_special_tokens=False)
-    num_tokens = len(tokens)
+    num_tokens = count_tokens(prompt_text)
 
     if num_tokens > 4097:
         st.warning("Please shorten your input text to less than 4097 tokens.  You are currently at {} tokens".format(num_tokens))
