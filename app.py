@@ -39,7 +39,7 @@ def app():
 
 # Function to generate response using ChatGPT
 def generate_response(prompt, resume, job_posting):
-    engine = "text-davinci-003"
+    engine = "text-davinci-002"
     prompt_text = f"Prompt: {prompt}\nResume: {resume}\nJob Posting: {job_posting}\n"
     tokenizer = AutoTokenizer.from_pretrained(engine)
     tokens = tokenizer.encode(prompt_text, add_special_tokens=False)
