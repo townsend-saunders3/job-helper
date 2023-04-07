@@ -38,7 +38,7 @@ def app():
         for prompt_choice in prompts:
             response = generate_response(prompt_choice, resume_text, job_posting_text)
             st.write(prompt_choice)
-            st.write(response)
+            st.markdown(response)
 
 def count_tokens(text):
     tokens = nltk.word_tokenize(text)
@@ -46,9 +46,9 @@ def count_tokens(text):
 
 # Function to generate response using ChatGPT
 def generate_response(prompt, resume, job_posting):
-    prompt_text = f"{prompt}\nResume: {resume}\nJob Posting: {job_posting}\n"
+    prompt_text = f"{prompt}\nResume: {resume}\n And the following Job Posting: {job_posting}\n"
     num_tokens = count_tokens(prompt_text)
-    pre_prompt = "Given the following resume and job description, "
+    pre_prompt = "Given the following resume "
 
     if num_tokens > 4097:
         st.warning("Please shorten your input text to less than 4097 tokens.  You are currently at {} tokens".format(num_tokens))
