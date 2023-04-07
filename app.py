@@ -62,7 +62,7 @@ def generate_response(prompt, resume, job_posting):
     )
 
 
-    return completion.choices[0].message
+    return completion.choices[0].message['content']
 
 if __name__ == "__main__":
     app()
