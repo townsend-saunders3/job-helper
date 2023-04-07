@@ -14,7 +14,7 @@ Installation
 Clone this repository to your local machine.
 Install the required packages by running pip install -r requirements.txt.
 Set your OpenAI API key as an environment variable named OPENAI_API_KEY. You can do this by running export OPENAI_API_KEY=YOUR_API_KEY in your terminal, or by adding export OPENAI_API_KEY=YOUR_API_KEY to your ~/.bashrc file (replace YOUR_API_KEY with your actual API key).
-Run the script by running streamlit run resume_analyzer.py.
+Run the script by running streamlit run app.py.
 Usage
 
 Run the script by following the installation instructions above.
