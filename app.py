@@ -35,7 +35,7 @@ def app():
 
     # Generate response button
     if st.button("Generate Response"):
-        i = 100/11
+        i = int(100/11)
         progress_text = "Generating feedback, please wait"
         progress_bar = st.progress(i, text=progress_text)
         for prompt_choice in prompts:
@@ -44,7 +44,7 @@ def app():
             st.divider()
             st.header(prompt_choice)
             st.markdown(response)
-            i += 100/11
+            i += int(100/11)
 
 def count_tokens(text):
     tokens = nltk.word_tokenize(text)
