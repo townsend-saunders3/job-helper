@@ -37,7 +37,8 @@ def app():
     if st.button("Generate Response"):
         for prompt_choice in prompts:
             response = generate_response(prompt_choice, resume_text, job_posting_text)
-            st.write(prompt_choice)
+            st.divider()
+            st.header(prompt_choice)
             st.markdown(response)
 
 def count_tokens(text):
