@@ -54,17 +54,15 @@ def generate_response(prompt, resume, job_posting):
         st.warning("Please shorten your input text to less than 4097 tokens.  You are currently at {} tokens".format(num_tokens))
         st.stop()
 
-    response = openai.Completion.create(
-        engine="gpt-3.5-turbo",
-        prompt=pre_prompt + prompt_text,
-        temperature=0.7,
-        max_tokens=2048,
-        n=1,
-        stop=None,
-        timeout=10,
+    completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": pre_prompt + prompt_text}
+        ]
     )
 
-    return response.choices[0].text
+
+    return completion.choices[0].message
 
 if __name__ == "__main__":
     app()
